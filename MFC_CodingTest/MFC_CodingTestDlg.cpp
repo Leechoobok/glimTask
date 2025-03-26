@@ -62,7 +62,7 @@ void CMFCCodingTestDlg::Initcanvas()
 {
 	int nWidth = 640;
 	int nHeight = 480;
-	int nBpp = 8;//Gray Level;
+	int nBpp = 8;
 	
 	m_bMovPoint = false;
 	m_image.Create(nWidth, -nHeight, nBpp);
@@ -76,7 +76,7 @@ void CMFCCodingTestDlg::Initcanvas()
 	}
 
 	int nPitch = m_image.GetPitch();
-	unsigned char* fm = (unsigned char*)m_image.GetBits();//첫번째 포인터 가져오기
+	unsigned char* fm = (unsigned char*)m_image.GetBits();
 
 	memset(fm, 0xff, nWidth * nHeight);
 }
@@ -218,7 +218,6 @@ void CMFCCodingTestDlg::DrawPoint(unsigned char* fm, int x, int y, int nRadius, 
 	int nPitch = m_image.GetPitch();
 	CString strPos;
 	CPoint point;
-	CPoint dot;
 	HDC dc = m_image.GetDC();
 
 	for (double rad = 0; rad < M_PI * 2; rad = rad + (M_PI / 360))
@@ -246,7 +245,6 @@ void CMFCCodingTestDlg::DrawCircle(unsigned char* fm, int x, int y, int nRadius,
 	int nResolution;
 	int nPitch = m_image.GetPitch();
 	CPoint point;
-	CPoint dot;
 	int nThikness = m_nThickness;
 	if (nRadius > m_image.GetHeight())
 	{
@@ -301,7 +299,7 @@ BOOL CMFCCodingTestDlg::vaildPointPos(int currentX, int currentY, int x, int y)
 	int nPitch = m_image.GetPitch();
 	int nRadius = m_nRadius;
 	CPoint point;
-	CPoint dot;
+	
 
 	for (double rad = 0; rad < M_PI * 2; rad = rad + (M_PI / 360))
 	{
@@ -382,9 +380,6 @@ void CMFCCodingTestDlg::OnLButtonDown(UINT nFlags, CPoint point)
 	
 	UpdateData(true);
 	int nColor = 0;
-	int nWidth = m_image.GetWidth();
-	int nHeight = m_image.GetHeight();
-	int nPitch = m_image.GetPitch();
 	int nRadius = m_nRadius;
 
 	unsigned char* fm = (unsigned char*)m_image.GetBits();//첫번째 포인터 가져오기

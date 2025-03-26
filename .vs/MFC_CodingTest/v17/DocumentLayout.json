@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\project\\MFC_CodingTest\\glimTask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBC60726-2B9E-4588-80EA-F7A646A51696}|MFC_CodingTest\\MFC_CodingTest.vcxproj|C:\\project\\MFC_CodingTest\\glimTask\\MFC_CodingTest\\MFC_CodingTestDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DBC60726-2B9E-4588-80EA-F7A646A51696}|MFC_CodingTest\\MFC_CodingTest.vcxproj|solutionrelative:MFC_CodingTest\\MFC_CodingTestDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MFC_CodingTestDlg.cpp",
+              "DocumentMoniker": "C:\\project\\MFC_CodingTest\\glimTask\\MFC_CodingTest\\MFC_CodingTestDlg.cpp",
+              "RelativeDocumentMoniker": "MFC_CodingTest\\MFC_CodingTestDlg.cpp",
+              "ToolTip": "C:\\project\\MFC_CodingTest\\glimTask\\MFC_CodingTest\\MFC_CodingTestDlg.cpp",
+              "RelativeToolTip": "MFC_CodingTest\\MFC_CodingTestDlg.cpp",
+              "ViewState": "AgIAALkAAAAAAAAAAAAmwNsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-26T13:05:12.613Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
