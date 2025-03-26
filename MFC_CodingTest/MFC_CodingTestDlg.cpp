@@ -473,13 +473,16 @@ using namespace std;
 void threadProcess(CWnd* pParent) {
 	
 	CMFCCodingTestDlg* pWnd = (CMFCCodingTestDlg*)pParent;
+	pWnd->GetDlgItem(IDC_BTN_INIT)->EnableWindow(false);
+	pWnd->GetDlgItem(IDC_BTN_RANDOM)->EnableWindow(false);
 	for (int i = 0; i < 10; i++)
 	{
 		pWnd->RandomProcess();
-		pWnd->GetDlgItem(IDC_BTN_INIT)->EnableWindow(false);
+		
 		Sleep(500);
 	}
 	pWnd->GetDlgItem(IDC_BTN_INIT)->EnableWindow(true);
+	pWnd->GetDlgItem(IDC_BTN_RANDOM)->EnableWindow(true);
 }
 
 void CMFCCodingTestDlg::OnBnClickedBtnRandom()
