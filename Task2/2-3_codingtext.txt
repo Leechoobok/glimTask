@@ -1,0 +1,79 @@
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int solution(int a, int b, int c, int d) {
+    vector<int> nDice(7);
+    int p = 0;
+    int q = 0;
+    int r = 0;
+    int answer = 0;
+    nDice[a]++;
+    nDice[b]++;
+    nDice[c]++;
+    nDice[d]++;
+    int nMax = *max_element(nDice.begin(), nDice.end());
+
+    if (a == b && b == c && b == c && c == d) {
+        answer = 1111 * a;
+    }
+    else {
+        
+        switch (nMax)
+        {
+        case 1:
+            for (int i = 0; i < 7; i++)
+            {
+                if (nDice[i] == 1)
+                {
+                    answer = i;
+                    break;
+                }
+            }
+            break;
+        case 2:
+            for (int i = 0; i < 7; i++)
+            {
+                if (nDice[i] == 2)
+                {
+                    if (p != 0)
+                        q = i;
+                    else
+                        p = i;
+
+                }
+                else if (nDice[i] == 1)
+                {
+                    if (q != 0)
+                        r = i;
+                    else
+                        q = i;
+                }
+                if (r != 0)
+                    answer = q * r;
+                else
+                    answer = (p + q) * abs(p - q);
+            }
+            break;
+        case 3:
+            for (int i = 0; i < 7; i++)
+            {
+                if (nDice[i] == 3)
+                {
+                    p = i;
+                }
+                else if (nDice[i] == 1)
+                {
+                    q = i;
+                }
+            }
+            answer = (10 * p + q) * (10 * p + q);
+            break;
+        default:
+            break;
+        }
+    }
+    return answer;
+}
